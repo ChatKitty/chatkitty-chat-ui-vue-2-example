@@ -41,7 +41,7 @@ This is an example project that demonstrates how to integrate ChatKitty's Chat U
     npm run serve
     ```
 
-   This will start the development server, and you can navigate to `http://localhost:8081` to see the chat interface in action.
+This will start the development server, and you can navigate to `http://localhost:8081` to see the chat interface in action.
 
 ## Configuration
 
