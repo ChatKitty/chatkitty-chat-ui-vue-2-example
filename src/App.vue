@@ -2,7 +2,7 @@
   <div id="app" class="container">
     <div class="header">
       <!-- Your header content -->
-      <img alt="Vue logo" src="./assets/logo.png">
+      <img alt="ChatKitty logo" src="./assets/logo.png">
     </div>
     <div class="chat-ui-wrapper">
       <!-- Chat UI will be rendered here -->
