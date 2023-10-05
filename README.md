@@ -85,7 +85,9 @@ The container styles can be customized. Here's an example:
 To customize the chat widget, use the [ChatKitty Platform API](https://chatkitty.com/docs/api).
 
 `PATCH` `https://api.chatkitty.com/widgets/{id}`
-`Content-Type: application/json+merge-patch`
+```
+Content-Type: application/json+merge-patch
+```
 ```json
 {
   "styles": {
