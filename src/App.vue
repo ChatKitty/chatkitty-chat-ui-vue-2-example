@@ -6,18 +6,53 @@
     </div>
     <div class="chat-ui-wrapper">
       <!-- Chat UI will be rendered here -->
-      <ChatWidget id="UWiEkKvdAaUJ1xut" username="2989c53a-d0c5-4222-af8d-fbf7b0c74ec6" height="100%"/>
+      <div id="chat-ui"></div>
     </div>
   </div>
 </template>
 
 <script>
-import {ChatWidget} from '@chatkitty/chat-ui-vue2'
+
+import {loadChatUi} from "@chatkitty/ui";
 
 export default {
   name: 'App',
-  components: {
-    ChatWidget
+  mounted() {
+    loadChatUi({
+      widgetId: 'UWiEkKvdAaUJ1xut',
+      username: '2989c53a-d0c5-4222-af8d-fbf7b0c74ec6',
+      container: {
+        height: '100%'
+      },
+      chatComponent: (context) => ({
+        menuActions: [
+          {
+            name: 'invite-user',
+            title: `Invite User (${context.locale})`
+          },
+          {
+            name: 'remove-user',
+            title: `Remove User (${context.locale})`
+          },
+          {
+            name: 'delete-channel',
+            title: `Delete Channel (${context.locale})`
+          }
+        ],
+        onMounted: () => {
+          console.log('Chat UI mounted with context:', context)
+        },
+        channelDetailsHandler: (channel) => {
+          console.log(channel)
+        },
+        menuActionHandler: (action) => {
+          console.log(action)
+        }
+      }),
+      onNotificationReceived: (notification) => {
+        console.log(notification)
+      }
+    })
   }
 }
 </script>

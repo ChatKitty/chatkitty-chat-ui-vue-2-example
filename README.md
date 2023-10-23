@@ -45,18 +45,27 @@ This will start the development server, and you can navigate to `http://localhos
 
 ## Configuration
 
-The main configuration is in `App.vue` where the `ChatWidget` component from ChatKitty is imported and utilized.
+In `App.vue`, the ChatKitty UI is loaded and initialized.
 
-The following properties are passed to the `ChatWidget`:
+The following properties are passed to the `loadChatUi`:
 
-- `id`: Your ChatKitty widget UI identifier
+- `widgetId`: Your ChatKitty widget UI identifier
 - `username`: The unique username for the chat session
-- `height`: Height of the chat widget (e.g. "100%")
+- `container`: Object specifying the container properties, e.g., `height`
+
+Furthermore, you can customize the chat components and handle different actions, such as mounting the chat UI, handling channel details, and handling menu actions.
 
 For example,
 
-```vue
-<ChatWidget id="UWiEkKvdAaUJ1xut" username="2989c53a-d0c5-4222-af8d-fbf7b0c74ec6" height="100%"/>
+```javascript
+loadChatUi({
+  widgetId: 'UWiEkKvdAaUJ1xut',
+  username: '2989c53a-d0c5-4222-af8d-fbf7b0c74ec6',
+  container: {
+    height: '100%'
+  },
+  ...
+});
 ```
 
 ## Customization
@@ -105,7 +114,7 @@ The complete list of styles that can be customized can be found [here](https://c
 ## Demo Dependencies
 
 - `vue: ^2.6.14`
-- `@chatkitty/chat-ui-vue2: ^1.0.0`
+- `@chatkitty/ui: latest-version` (You may want to specify the exact version you're using)
 
 ## License
 
