@@ -47,7 +47,7 @@ This will start the development server, and you can navigate to `http://localhos
 
 In `App.vue`, the ChatKitty UI is loaded and initialized.
 
-The following properties are passed to the `loadChatUi`:
+The following properties are passed to `loadChatUi`:
 
 - `widgetId`: Your ChatKitty widget UI identifier
 - `username`: The unique username for the chat session
