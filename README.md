@@ -45,13 +45,21 @@ This will start the development server, and you can navigate to `http://localhos
 
 ## Configuration
 
-In `App.vue`, the ChatKitty UI is loaded and initialized.
+In the `App.vue` file, a div container with the ID `chat-ui` is specified as the location where the ChatKitty UI will be rendered.
+
+```html
+<div id="chat-ui"></div>
+```
+
+This div container acts as a placeholder where the ChatKitty chat interface will be dynamically loaded and displayed. When calling the `loadChatUi` function during the Vue component's `mounted` lifecycle hook, the chat interface will be rendered within this div container.
+
+It's essential to ensure this container is present in your Vue template and properly styled, so the chat interface displays correctly within your application layout.
 
 The following properties are passed to `loadChatUi`:
 
 - `widgetId`: Your ChatKitty widget UI identifier
 - `username`: The unique username for the chat session
-- `container`: Object specifying the container properties, e.g., `height`
+- `container`: Object specifying the container properties, e.g., `id` (of the placeholder div), `height`, `width`
 
 Furthermore, you can customize the chat components and handle different actions, such as mounting the chat UI, handling channel details, and handling menu actions.
 

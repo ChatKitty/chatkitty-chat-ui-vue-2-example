@@ -12,8 +12,7 @@
 </template>
 
 <script>
-
-import {loadChatUi} from "@chatkitty/ui";
+import { loadChatUi } from "@chatkitty/ui";
 
 export default {
   name: 'App',
@@ -40,7 +39,7 @@ export default {
           }
         ],
         onMounted: () => {
-          console.log('Chat UI mounted with context:', context)
+          console.log('Chat UI mounted with context: ', context)
         },
         channelDetailsHandler: (channel) => {
           console.log(channel)
@@ -61,7 +60,7 @@ export default {
 .container {
   display: flex;
   flex-direction: column;
-  height: 100vh;  /* Assuming you want to take the full viewport height */
+  height: 100vh; /* Assuming you want to take the full viewport height */
 }
 
 .header {
