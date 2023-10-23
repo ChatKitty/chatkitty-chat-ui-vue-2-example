@@ -114,7 +114,7 @@ The complete list of styles that can be customized can be found [here](https://c
 ## Demo Dependencies
 
 - `vue: ^2.6.14`
-- `@chatkitty/ui: latest-version` (You may want to specify the exact version you're using)
+- `@chatkitty/ui: ^1.0.1`
 
 ## License
 
