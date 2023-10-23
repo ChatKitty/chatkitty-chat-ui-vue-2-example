@@ -7,7 +7,6 @@ This is an example project that demonstrates how to integrate ChatKitty's Chat U
 - Fully functional chat interface
 - Easy to customize
 - Real-time updates
-- Built with Vue 2.x
 
 ## Prerequisites
 
