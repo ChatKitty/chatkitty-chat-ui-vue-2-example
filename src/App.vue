@@ -74,4 +74,8 @@ export default {
   flex: 1; /* This allows the wrapper to take up the remaining space */
   min-height: 0; /* Fixes flexbox sizing issue in some cases */
 }
+
+body {
+  margin: 0;
+}
 </style>
