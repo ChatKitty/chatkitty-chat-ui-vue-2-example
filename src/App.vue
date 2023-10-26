@@ -2,7 +2,7 @@
   <div id="app" class="container">
     <div class="header">
       <!-- Your header content -->
-      <img alt="ChatKitty logo" src="./assets/logo.png">
+      <img alt="ChatKitty logo" src="./assets/logo.png" height="125" width="125">
     </div>
     <div class="chat-ui-wrapper">
       <!-- Chat UI will be rendered here -->
@@ -65,9 +65,9 @@ export default {
 
 .header {
   /* Your header styles */
-  display: none;
+  display: flex;
   justify-content: center;
-  height: 200px;
+  height: 125px;
 }
 
 .chat-ui-wrapper {
