@@ -65,7 +65,7 @@ export default {
 
 .header {
   /* Your header styles */
-  display: flex;
+  display: none;
   justify-content: center;
   height: 200px;
 }
