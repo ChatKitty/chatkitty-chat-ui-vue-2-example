@@ -70,6 +70,12 @@ export default {
   height: 125px;
 }
 
+@media (max-width: 600px) {
+  .header {
+    display: none;
+  }
+}
+
 .chat-ui-wrapper {
   flex: 1; /* This allows the wrapper to take up the remaining space */
   min-height: 0; /* Fixes flexbox sizing issue in some cases */
