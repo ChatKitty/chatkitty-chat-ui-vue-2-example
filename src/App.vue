@@ -72,7 +72,7 @@ export default {
 
 @media (max-width: 600px) {
   .header {
-    display: none;
+    display: none; /* Hide header on mobile */
   }
 }
 
