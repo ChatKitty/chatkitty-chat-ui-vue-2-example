@@ -1,6 +1,6 @@
 # ChatKitty Chat UI Vue 2 Example
 
-[This is an example](chatkitty-chat-ui-vue-2-example.vercel.app) project that demonstrates how to integrate ChatKitty's Chat UI with a Vue 2 application. ChatKitty provides a fully-featured chat interface out-of-the-box and this project aims to make the integration with Vue 2 as seamless as possible.
+[This is an example](https://chatkitty-chat-ui-vue-2-example.vercel.app/) project that demonstrates how to integrate ChatKitty's Chat UI with a Vue 2 application. ChatKitty provides a fully-featured chat interface out-of-the-box and this project aims to make the integration with Vue 2 as seamless as possible.
 
 ## Features
 
