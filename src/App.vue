@@ -2,9 +2,9 @@
   <div id="app" class="container">
     <div class="header">
       <!-- Your header content -->
-      <img alt="ChatKitty logo" src="./assets/logo.png" height="125" width="125">
+      <img alt="Example App Logo" src="./assets/logo.png" height="125" width="125">
     </div>
-    <div class="chat-ui-wrapper">
+    <div class="example-chat-ui-wrapper">
       <!-- Chat UI will be rendered here -->
       <div id="chat-ui"></div>
     </div>
@@ -61,7 +61,7 @@ export default {
           }
         </style>
         <div class="error">
-          <h1>Oops!</h1>
+          <h1>Example App • Oops!</h1>
           <p>${message}</p>
         </div>
       `
@@ -93,7 +93,7 @@ export default {
   }
 }
 
-.chat-ui-wrapper {
+.example-chat-ui-wrapper {
   flex: 1; /* This allows the wrapper to take up the remaining space */
   min-height: 0; /* Fixes flexbox sizing issue in some cases */
 }
