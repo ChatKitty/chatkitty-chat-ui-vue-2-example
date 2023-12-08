@@ -23,22 +23,22 @@ export default {
       container: {
         height: '100%'
       },
-      chatComponent: (context) => ({
-        menuActions: [],
-        onMounted: () => {
-          console.log('Chat UI mounted with context: ', context)
-        },
-        onHeaderSelected: (channel) => {
-          console.log(channel)
-        },
-        onMenuActionSelected: (action) => {
-          console.log(action)
-        }
-      }),
-      onNotificationReceived: (notification) => {
-        console.log(notification)
+      components: {
+        chat: (context) => ({
+          menuActions: [],
+          onMounted: () => {
+            console.log('Chat UI mounted with context: ', context)
+          },
+          onHeaderSelected: (channel) => {
+            console.log(channel)
+          },
+          onMenuActionSelected: (action) => {
+            console.log(action)
+          }
+        })
       },
-      errorTemplate: ({message}) => template`
+      templates: {
+        error: ({message}) => template`
         <style>
           .error {
             display: flex;
@@ -64,7 +64,8 @@ export default {
           <h1>Oops!</h1>
           <p>${message}</p>
         </div>
-      `,
+      `
+      },
     }, {
       timeout: 50000,
     })
