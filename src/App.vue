@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import { loadChatUi } from "@chatkitty/ui";
+import {loadChatUi, template} from "@chatkitty/ui";
 
 export default {
   name: 'App',
@@ -24,20 +24,7 @@ export default {
         height: '100%'
       },
       chatComponent: (context) => ({
-        menuActions: [
-          {
-            name: 'invite-user',
-            title: `Invite User (${context.locale})`
-          },
-          {
-            name: 'remove-user',
-            title: `Remove User (${context.locale})`
-          },
-          {
-            name: 'delete-channel',
-            title: `Delete Channel (${context.locale})`
-          }
-        ],
+        menuActions: [],
         onMounted: () => {
           console.log('Chat UI mounted with context: ', context)
         },
@@ -50,7 +37,13 @@ export default {
       }),
       onNotificationReceived: (notification) => {
         console.log(notification)
-      }
+      },
+      errorTemplate: ({message}) => template`
+        <div style="text-align: center;">
+          <h1>Oops!</h1>
+          <p>${message}</p>
+        </div>
+      `,
     })
   }
 }
