@@ -28,10 +28,10 @@ export default {
         onMounted: () => {
           console.log('Chat UI mounted with context: ', context)
         },
-        channelDetailsHandler: (channel) => {
+        onHeaderSelected: (channel) => {
           console.log(channel)
         },
-        menuActionHandler: (action) => {
+        onMenuActionSelected: (action) => {
           console.log(action)
         }
       }),
@@ -60,7 +60,7 @@ export default {
             margin: 0;
           }
         </style>
-        <div class="error" ">
+        <div class="error">
           <h1>Oops!</h1>
           <p>${message}</p>
         </div>
