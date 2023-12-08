@@ -39,11 +39,34 @@ export default {
         console.log(notification)
       },
       errorTemplate: ({message}) => template`
-        <div style="text-align: center;">
+        <style>
+          .error {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            padding: 0 20px;
+          }
+
+          .error h1 {
+            font-size: 24px;
+            font-weight: 500;
+            margin: 0;
+          }
+
+          .error p {
+            font-size: 16px;
+            margin: 0;
+          }
+        </style>
+        <div class="error" ">
           <h1>Oops!</h1>
           <p>${message}</p>
         </div>
       `,
+    }, {
+      timeout: 50000,
     })
   }
 }
