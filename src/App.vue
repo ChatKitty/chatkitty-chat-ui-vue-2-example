@@ -23,6 +23,9 @@ export default {
       container: {
         height: '100%'
       },
+      audio: {
+        enabled: true
+      },
       components: {
         chat: (context) => ({
           menuActions: [],
