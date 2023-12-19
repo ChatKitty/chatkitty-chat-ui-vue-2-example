@@ -121,7 +121,7 @@ The complete list of styles that can be customized can be found [here](https://c
 ## Demo Dependencies
 
 - `vue: ^2.6.14`
-- `@chatkitty/ui: ^1.5.1`
+- `chatkitty: ^2.0.2`
 
 ## License
 

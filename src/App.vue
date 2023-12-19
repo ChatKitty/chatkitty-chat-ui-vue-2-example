@@ -12,14 +12,36 @@
 </template>
 
 <script>
-import {loadChatUi, template} from "@chatkitty/ui";
+import {connectApi, loadChatUi, template} from "chatkitty";
 
 export default {
   name: 'App',
-  mounted() {
+  async mounted() {
+    const connection = await connectApi(
+        {
+          apiKey: 'afaac908-1db3-4b5c-a7ae-c040b9684403',
+          username: '2989c53a-d0c5-4222-af8d-fbf7b0c74ec6'
+        }
+    )
+
+    const {user, unreadChannelsCount, notifications} = connection
+
+    console.log('Connected as user: ', user.value)
+
+    user.watch((user) => {
+      console.log('User: ', user)
+    })
+
+    unreadChannelsCount.watch((count) => {
+      console.log('Unread channels count: ', count)
+    })
+
+    notifications.watch((notification) => {
+      console.log('Received notification: ', notification)
+    })
+
     loadChatUi({
       widgetId: 'UWiEkKvdAaUJ1xut',
-      username: '2989c53a-d0c5-4222-af8d-fbf7b0c74ec6',
       container: {
         height: '100%'
       },
@@ -71,6 +93,7 @@ export default {
       },
     }, {
       timeout: 50000,
+      connection
     })
   }
 }
