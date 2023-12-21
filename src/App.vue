@@ -24,7 +24,7 @@ export default {
         }
     )
 
-    const {user, unreadChannelsCount, notifications} = connection
+    const {user, unreadChannelsCount, notifications, updateUser} = connection
 
     console.log('Connected as user: ', user.value)
 
@@ -53,6 +53,12 @@ export default {
           menuActions: [],
           onMounted: () => {
             console.log('Chat UI mounted with context: ', context)
+
+            updateUser({
+              properties: {
+                lastUpdated: new Date().toISOString()
+              }
+            })
           },
           onHeaderSelected: (channel) => {
             console.log(channel)
