@@ -99,7 +99,10 @@ export default {
       },
     }, {
       timeout: 50000,
-      connection
+      connection,
+      $environment: {
+        origin: 'https://ui.staging.chatkitty.com'
+      }
     })
   }
 }
